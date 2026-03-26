@@ -1,0 +1,91 @@
+:root {
+    --MAIN-COLOR: #FFF;
+    --BOX-color: #9A0099;
+    --SkriftFarge: #000;
+    --HovedBorder: solid #444;
+    --hovedBorderRadius: 25px;
+    --SecondBorder: dashed rgb(0, 0, 0);
+    --HovedFont: "Arial";
+    --Padding: 2%;
+    --LinkStyle: none;
+    --standardDuration: 0.4s;
+
+}
+
+body {
+    background-color: var(--MAIN-COLOR);
+    font-family: var(--HovedFont);
+}
+
+p {
+    padding: var(--Padding);
+    background-color: var(--BOX-color);
+    color: var(--SkriftFarge);
+    border: var(--HovedBorder);
+    border-radius: var(--hovedBorderRadius);
+}
+
+a {
+    color: var(--SkriftFarge);
+    text-decoration: var(--LinkStyle);
+}
+
+div {
+    border: var(--SecondBorder);
+}
+
+button {
+    transition: var(--standardDuration) ;
+    background-color: var(--MAIN-COLOR);
+    color: var(--BOX-color);
+    border: var(--HovedBorder);
+    width: 10%;
+    border-radius: var(--hovedBorderRadius);
+}
+
+button:hover {
+    background-color: var(--BOX-color);
+    color: var(--MAIN-COLOR);
+    animation: shake var(--standardDuration) ease-out;
+
+}
+@keyframes shake {
+    0% {
+        transform: skewX(-10deg);
+    }
+
+    25% {
+        transform: skewX(10deg);
+    }
+
+    50% {
+        transform: skewX(-10deg);
+    }
+
+    75% {
+        transform: skewX(10deg);
+    }
+
+    100% {
+        transform: skewX(-10deg);
+    }
+}
+
+table{
+    border: var(--HovedBorder);
+    border-radius: var(--hovedBorderRadius);
+    padding: var(--Padding);
+}
+th{
+    background-color: var(--BOX-color);
+}
+tr{
+    background-color: var(--MAIN-COLOR);
+}
+tr:nth-child(even){
+    background-color: #444;
+}
+td{
+    padding: 0%;
+    border: var(--HovedBorder);
+}
